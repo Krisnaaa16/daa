@@ -1,0 +1,24 @@
+@startuml
+actor "Tim IT" as IT
+actor "Pengelola Fakultas" as Pengelola
+actor "Tim QA" as QA
+actor "Sistem Cloud" as Cloud
+
+rectangle "Sistem Analisis Data Fakultas" {
+  usecase "Integrasi Data Mahasiswa dan Dosen" as UC1
+  usecase "Dashboard Visual untuk Analisis Kinerja" as UC2
+  usecase "Laporan Otomatis untuk Akreditasi" as UC3
+  usecase "Analisis Data Fasilitas" as UC4
+  usecase "Mengekspor Laporan" as UC5
+}
+
+IT --> UC1 : "Integrasi Data Mahasiswa dan Dosen"
+Pengelola --> UC2 : "Menggunakan Dashboard Visual"
+QA --> UC3 : "Mengakses Laporan Akreditasi"
+Pengelola --> UC4 : "Melihat Analisis Fasilitas"
+Cloud --> UC1 : "Menyediakan Infrastruktur untuk Integrasi"
+Cloud --> UC2 : "Menyediakan Infrastruktur untuk Visualisasi"
+Cloud --> UC3 : "Menyediakan Infrastruktur untuk Laporan"
+Cloud --> UC4 : "Menyediakan Infrastruktur untuk Analisis"
+UC3 --> UC5 : "Menghasilkan Laporan Ekspor"
+@enduml

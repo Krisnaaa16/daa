@@ -1,0 +1,23 @@
+@startuml
+
+package App
+ package model {
+class User{
+  -name
+  -email
+ }
+}
+ package migration{
+class Create_User{
+  -id
+  -name
+ }
+}
+package filament-resource{
+class UserResource{
+ +test
+}
+}
+
+
+@enduml

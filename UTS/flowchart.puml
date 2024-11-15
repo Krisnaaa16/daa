@@ -1,0 +1,24 @@
+@startuml
+start
+:Pengumpulan Data Fakultas;
+if (Data Lengkap?) then (ya)
+  :Integrasi Data Mahasiswa dan Dosen;
+  :Analisis Data Fasilitas;
+  :Membangun Dashboard Visual untuk Kinerja;
+  :Membuat Laporan Otomatis untuk Akreditasi;
+  :Tampilkan Laporan dan Dashboard;
+else (tidak)
+  :Minta Data Lengkap dari Fakultas;
+  :Tunggu Data;
+  if (Data Diterima?) then (ya)
+    :Integrasi Data Mahasiswa dan Dosen;
+    :Analisis Data Fasilitas;
+    :Membangun Dashboard Visual untuk Kinerja;
+    :Membuat Laporan Otomatis untuk Akreditasi;
+    :Tampilkan Laporan dan Dashboard;
+  else (tidak)
+    :Proses Dibatalkan;
+  endif
+endif
+stop
+@enduml
